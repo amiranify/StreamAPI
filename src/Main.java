@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Количество несовершеннолетних: " + numberOfMinor);
 
         List<String> namesOfConscripts = persons.stream()
-                .filter(person -> person.getSex().equals(Sex.WOMAN))
+                .filter(person -> person.getSex().equals(Sex.MAN))
                 .filter(person -> person.getAge() >= 18 && person.getAge() <= 27)
                 .map(Person::getFamily)
                 .collect(Collectors.toList());
